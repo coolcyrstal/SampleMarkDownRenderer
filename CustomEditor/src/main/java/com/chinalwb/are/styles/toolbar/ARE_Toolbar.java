@@ -433,7 +433,7 @@ public class ARE_Toolbar extends LinearLayout {
 	 *
 	 */
 	private void initStyles() {
-		this.mEmojiStyle = new ARE_Emoji(this.mEmojiImageView);
+//		this.mEmojiStyle = new ARE_Emoji(this.mEmojiImageView);
 		this.mFontsizeStyle = new ARE_FontSize(this.mFontsizeImageView);
 		this.mFontfaceStyle = new ARE_Fontface(this.mFontfaceImageView);
 		this.mBoldStyle = new ARE_Bold(this.mBoldImageView);
@@ -458,7 +458,7 @@ public class ARE_Toolbar extends LinearLayout {
 		this.mVideoStyle = new ARE_Video(this.mRteInsertVideo);
 		this.mAtStyle = new ARE_At();
 
-		this.mStylesList.add(this.mEmojiStyle);
+//		this.mStylesList.add(this.mEmojiStyle);
 		this.mStylesList.add(this.mFontsizeStyle);
 		this.mStylesList.add(this.mFontfaceStyle);
 		this.mStylesList.add(this.mBoldStyle);

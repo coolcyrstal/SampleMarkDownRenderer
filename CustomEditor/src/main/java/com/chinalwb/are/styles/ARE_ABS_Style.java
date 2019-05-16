@@ -177,7 +177,7 @@ public abstract class ARE_ABS_Style<E> implements IARE_Style {
 
 	protected void changeSpanInsideStyle(Editable editable, int start, int end, E e) {
 		// Do nothing by default
-		Log.e("ARE", "in side a span!!");
+//		Log.e("ARE", "in side a span!!");
 	}
 
 	private void checkAndMergeSpan(Editable editable, int start, int end, Class<E> clazzE) {

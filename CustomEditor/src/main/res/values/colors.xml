@@ -32,4 +32,6 @@
         <item>#000000</item>
         <item>#0000FF</item>
     </array>
+
+    <color name="theme_secondary">#FAFAFA</color>
 </resources>

@@ -35,4 +35,5 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
     implementation 'com.github.savvyapps:ToggleButtonLayout:1.2.0'
     implementation project(':CustomEditor')
+    implementation 'org.jsoup:jsoup:1.11.1'
 }

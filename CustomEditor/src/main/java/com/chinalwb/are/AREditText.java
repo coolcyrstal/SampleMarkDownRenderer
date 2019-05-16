@@ -464,7 +464,7 @@ public class AREditText extends AppCompatEditText {
 		html.append(editTextHtml);
 		html.append("</body></html>");
 		String htmlContent = html.toString().replaceAll(Constants.ZERO_WIDTH_SPACE_STR_ESCAPE, "");
-		System.out.println(htmlContent);
+//		System.out.println(htmlContent);
 		return htmlContent;
 	}
 

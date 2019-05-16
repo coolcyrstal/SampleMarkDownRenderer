@@ -1,13 +1,14 @@
 package com.example.samplemarkdownrenderer;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.widget.EditText;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.chinalwb.are.AREditor;
 import com.savvyapps.togglebuttonlayout.Toggle;
 import com.savvyapps.togglebuttonlayout.ToggleButtonLayout;
 
@@ -23,10 +24,16 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.main_text_view)
     TextView mTextView;
-//    @BindView(R.id.main_edit_text)
+    //    @BindView(R.id.main_edit_text)
 //    EditText mEditText;
     @BindView(R.id.toggle_button_layout)
     ToggleButtonLayout mToggleButtonLayout;
+    @BindView(R.id.are_editor)
+    AREditor mAREditor;
+    @BindView(R.id.extract_button)
+    Button mButton;
+    @BindView(R.id.result_button)
+    Button mButtonResult;
 
 
     private String mFullText = "";
@@ -49,7 +56,15 @@ public class MainActivity extends AppCompatActivity {
         mListItems.add("strike-stroke");
 
         final Markwon markwon = Markwon.create(getApplicationContext());
-        markwon.setMarkdown(mTextView, mTextTemp);
+//        Markwon.builder(getApplicationContext())
+//                .usePlugin(CorePlugin.create())
+//                .usePlugin(new AbstractMarkwonPlugin() {
+//                    @Override
+//                    public void configureHtmlRenderer(@NonNull MarkwonHtmlRenderer.Builder builder) {
+//                        super.configureHtmlRenderer(builder);
+//                    }
+//                });
+//        markwon.setMarkdown(mTextView, mTextTemp);
 
 //        mEditText.addTextChangedListener(new TextWatcher() {
 //            @Override
@@ -78,6 +93,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public Unit invoke(Toggle toggle, Boolean aBoolean) {
                 return MainActivity.this.showToggle(toggle, aBoolean);
+            }
+        });
+
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mTextView.setText(mAREditor.getHtml());
+//                markwon.setMarkdown(mTextView, mAREditor.getHtml());
+            }
+        });
+
+        mButtonResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
+                intent.putExtra("result", mAREditor.getHtml());
+                startActivity(intent);
             }
         });
     }
