@@ -22,12 +22,12 @@
     </LinearLayout>
 
 
-    <EditText
-        android:id="@+id/main_edit_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minWidth="50dp"
-        android:layout_marginTop="10dp" />
+    <!--<EditText-->
+        <!--android:id="@+id/main_edit_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:minWidth="50dp" />-->
 
     <com.savvyapps.togglebuttonlayout.ToggleButtonLayout
         android:id="@+id/toggle_button_layout"
@@ -39,4 +39,11 @@
         app:menu="@menu/toggle_menu"
         app:multipleSelection="false"
         app:selectedColor="@color/colorPrimary" />
+
+    <com.chinalwb.are.AREditor
+        android:id="@+id/are_editor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:background="#44AAAAAA" />
 </LinearLayout>
